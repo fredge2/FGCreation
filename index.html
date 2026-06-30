@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FG Création - Développeur Web dans les Vosges</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">FG <span>Création</span></div>
+      <button class="burger-menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="#accueil" class="active">Accueil</a></li>
+          <li><a href="#approche">Mon Approche</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <h1>Création numérique & logicielle</h1>
+        <h2>Votre site web sur mesure</h2>
+        <p>
+          Au cœur des Vosges, j'accompagne les artisans, commerçants et
+          associations dans leur transition numérique avec des solutions
+          performantes et esthétiques.
+        </p>
+      </section>
+
+      <div class="container">
+        <section id="approche" class="split-section">
+          <div class="text-content">
+            <h2 class="section-title" style="text-align: left">Mon Approche</h2>
+
+            <div class="text-body">
+              <p style="margin-bottom: 1.5rem">
+                "C'est par le code et le design que j'ai trouvé le moyen de
+                mettre en valeur le savoir-faire local de notre région.
+              </p>
+              <p style="margin-bottom: 1.5rem">
+                J'ai à cœur de créer des sites internet qui ne sont pas de
+                simples vitrines, mais de véritables outils de travail :
+                rapides, sécurisés et parfaitement adaptés à vos besoins.
+              </p>
+              <p
+                style="
+                  font-style: italic;
+                  font-weight: 500;
+                  color: var(--primary-color);
+                "
+              >
+              </p>
+            </div>
+          </div>
+
+          <div class="image-container">
+            <img src="assets/chemin.jpg" alt="Développeur FG Création" />
+          </div>
+        </section>
+
+        <section id="services" style="margin-top: 5rem">
+          <h2 class="section-title">Mes Services</h2>
+          <div class="services-grid">
+            <div class="service-box">
+              <h3>Sites Vitrines</h3>
+              <p>
+                Présentez votre activité, vos valeurs et attirez de nouveaux
+                clients avec un design élégant, clair et professionnel.
+              </p>
+            </div>
+            <div class="service-box">
+              <h3>E-commerce</h3>
+              <p>
+                Vendez vos produits en ligne 24h/24 avec une boutique sécurisée,
+                performante et facile à gérer au quotidien.
+              </p>
+            </div>
+            <div class="service-box">
+              <h3>Sur Mesure</h3>
+              <p>
+                Des applications web spécifiques pour digitaliser vos processus
+                internes et vous faire gagner un temps précieux.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio" style="margin-top: 5rem">
+          <h2 class="section-title">Mes Réalisations</h2>
+          <p
+            style="
+              text-align: center;
+              max-width: 800px;
+              margin: 0 auto 3rem auto;
+              color: var(--text-light);
+            "
+          >
+            Explorez une sélection de mes derniers projets web. Cliquez sur une
+            image pour l'agrandir et visiter le site.
+          </p>
+
+          <div class="photo-grid-two-rows" data-gallery="portfolio">
+            <img
+              src="assets/potier.PNG"
+              class="gallery-thumb"
+              alt="Site Vitrine - Potier de grès"
+              data-link="https://potier.netlify.app/"
+            />
+            <img
+              src="assets/chroniques.PNG"
+              class="gallery-thumb"
+              alt="Blog - Chroniques d'Oelenberg"
+              data-link="https://chroniques-oelenberg.netlify.app/"
+            />
+            <img
+              src="assets/jardiniers.PNG"
+              class="gallery-thumb"
+              alt="Association - Jardiniers de la Bresse"
+              data-link="https://les-jardiniers-de-la-bresse.netlify.app/"
+            />
+            <img
+              src="assets/patrimoinePNG.PNG"
+              class="gallery-thumb"
+              alt="Culture - Patrimoine Chrétien Vivant"
+              data-link="https://patrimoine-chretien-vivant.netlify.app/"
+            />
+          </div>
+
+          <div class="gallery-info-box">
+            <p>cliquez sur une image pour accéder au carrousel interactif</p>
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem">
+            <button id="btn-all-portfolio" class="btn-popup-trigger">
+              Voir tous les projets
+            </button>
+          </div>
+
+          <div id="data-all-portfolio" style="display: none">
+            <img
+              src="assets/potier.PNG"
+              alt="Site Vitrine - Potier de grès"
+              data-link="https://potier.netlify.app/"
+            />
+            <img
+              src="assets/chroniques.PNG"
+              alt="Blog - Chroniques d'Oelenberg"
+              data-link="https://chroniques-oelenberg.netlify.app/"
+            />
+            <img
+              src="assets/jardiniers.PNG"
+              alt="Association - Jardiniers de la Bresse"
+              data-link="https://les-jardiniers-de-la-bresse.netlify.app/"
+            />
+            <img
+              src="assets/patrimoinePNG.PNG"
+              alt="Culture - Patrimoine Chrétien Vivant"
+              data-link="https://patrimoine-chretien-vivant.netlify.app/"
+            />
+            <img
+              src="assets/rando.PNG"
+              alt="Événement - Rando Moto"
+              data-link="https://randomoto.netlify.app/"
+            />
+          </div>
+        </section>
+
+        <section
+          id="contact"
+          class="split-section"
+          style="margin-top: 6rem; margin-bottom: 2rem"
+        >
+          <div class="image-container">
+            <img
+              src="assets/carte-societe.png"
+              alt="Carte de visite FG Création"
+              style="box-shadow: 0 10px 30px rgba(109, 40, 217, 0.2)"
+            />
+          </div>
+          <div class="text-content">
+            <h2 class="section-title" style="text-align: left">
+              Contactez-moi
+            </h2>
+            <p style="margin-bottom: 2rem; color: var(--text-light)">
+              Prêt à donner vie à votre projet numérique ? Discutons-en
+              ensemble.
+            </p>
+
+            <form class="contact-form">
+              <input type="text" placeholder="Votre nom" required />
+              <input type="email" placeholder="Votre courriel" required />
+              <textarea
+                placeholder="Votre projet en quelques mots..."
+                rows="5"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                class="btn-popup-trigger"
+                style="
+                  width: 100%;
+                  background: var(--primary-color);
+                  color: white;
+                "
+              >
+                Envoyer la demande
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="image-modal" class="modal">
+      <span class="close-modal">&times;</span>
+      <button class="modal-nav-btn prev-modal-btn">❮</button>
+      <div class="modal-image-wrapper">
+        <img class="modal-content" id="modal-img" alt="Image agrandie" />
+        <div id="modal-caption"></div>
+        <a
+          id="modal-link"
+          href="#"
+          target="_blank"
+          class="btn-popup-trigger"
+          style="
+            margin-top: 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            display: none;
+          "
+          >Visiter le site</a
+        >
+      </div>
+      <button class="modal-nav-btn next-modal-btn">❯</button>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 FG Création - Votre site web sur mesure dans les Vosges</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

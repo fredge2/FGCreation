@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  /* Violet tech élégant issu de la carte de visite */
+  --primary-color: #7c3aed;
+  /* Bleu marine/Indigo très sombre pour les textes (Zéro Noir) */
+  --title-color: #1e1b4b;
+
+  --bg-color: #fafafa;
+  --bg-secondary: #f3f4f6;
+  --text-color: #374151;
+  --text-light: #6b7280;
+
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* La correction magique : on garde 100px de marge en haut pour le menu */
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: var(--font-text);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  color: var(--title-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+  background-color: #ffffff;
+  padding: 1.2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(30, 27, 75, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary-color);
+}
+
+.burger-menu {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--title-color);
+}
+
+/* --- LAYOUT GLOBAL --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 5%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: var(--title-color);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  height: 85vh;
+  background-image:
+    linear-gradient(rgba(30, 27, 75, 0.7), rgba(30, 27, 75, 0.8)),
+    url("assets/vosges1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  color: #ddd6fe;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+}
+
+/* --- SPLIT SECTION --- */
+.split-section {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.split-section > * {
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(30, 27, 75, 0.08);
+}
+
+.text-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* --- SERVICES GRID --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-box {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  border-top: 4px solid var(--primary-color);
+  box-shadow: 0 4px 15px rgba(30, 27, 75, 0.04);
+  /* Modification de la ligne ci-dessous pour une animation plus douce et complète */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+
+.service-box:hover {
+  /* On lève la carte de 12px au lieu de 5px, et on l'agrandit de 2% */
+  transform: translateY(-12px) scale(1.02);
+  /* On ajoute une belle ombre violette pour accentuer l'effet de profondeur */
+  box-shadow: 0 20px 35px rgba(124, 58, 237, 0.15);
+}
+
+.service-box h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+/* --- GALERIE PHOTOS --- */
+.photo-grid-two-rows {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-thumb {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(30, 27, 75, 0.06);
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+.gallery-info-box {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.gallery-info-box p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  display: inline-block;
+  padding: 0.4rem 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+}
+
+/* --- BOUTONS --- */
+.btn-popup-trigger {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.8rem 2rem;
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-popup-trigger:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* --- FORMULAIRE --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: var(--font-text);
+  background: white;
+  color: var(--text-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* --- MODAL LIGHTBOX (LE CARROUSEL) --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.95);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-image-wrapper {
+  max-width: 80%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 100%;
+  max-height: 70vh; /* Légèrement réduit pour faire de la place au bouton */
+  border-radius: 8px;
+  box-shadow: 0 5px 30px rgba(30, 27, 75, 0.4);
+}
+
+#modal-caption {
+  color: white;
+  margin-top: 1.5rem;
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.modal-nav-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+.modal-nav-btn:hover {
+  background: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 2600;
+}
+
+.close-modal:hover {
+  color: var(--primary-color);
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: var(--title-color); /* Indigo foncé */
+  color: #e5e7eb;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 850px) {
+  .burger-menu {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 10px 15px rgba(30, 27, 75, 0.05);
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .split-section,
+  .services-grid {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .photo-grid-two-rows {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .modal-nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+}
