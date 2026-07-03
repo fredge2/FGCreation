@@ -147,4 +147,59 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // ==========================================
+  // 5. MODALE CARTE DE VISITE (Agrandissement)
+  // ==========================================
+  const cardModal = document.getElementById("card-modal");
+  const cardModalClose = document.getElementById("card-modal-close");
+  const cardZoomTrigger = document.getElementById("card-zoom-trigger");
+  const btnCardZoom = document.getElementById("btn-card-zoom");
+
+  function openCardModal() {
+    if (cardModal) {
+      cardModal.classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeCardModal() {
+    if (cardModal) {
+      cardModal.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+  }
+
+  // Ouvrir au clic sur la carte
+  if (cardZoomTrigger) {
+    cardZoomTrigger.addEventListener("click", openCardModal);
+  }
+
+  // Ouvrir au clic sur le bouton
+  if (btnCardZoom) {
+    btnCardZoom.addEventListener("click", openCardModal);
+  }
+
+  // Fermer via le bouton ×
+  if (cardModalClose) {
+    cardModalClose.addEventListener("click", closeCardModal);
+  }
+
+  // Fermer en cliquant sur l'overlay (hors de la boîte)
+  if (cardModal) {
+    cardModal.addEventListener("click", (e) => {
+      if (e.target === cardModal) closeCardModal();
+    });
+  }
+
+  // Fermer avec la touche Echap
+  document.addEventListener("keydown", (e) => {
+    if (
+      e.key === "Escape" &&
+      cardModal &&
+      cardModal.classList.contains("show")
+    ) {
+      closeCardModal();
+    }
+  });
 });

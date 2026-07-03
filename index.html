@@ -8,7 +8,11 @@
   </head>
   <body>
     <header>
-      <div class="logo">FG <span>Création</span></div>
+      <div class="logo">
+        <a href="#accueil" class="logo">
+          <img src="assets/logo.png" alt="Logo FG Création" />
+        </a>
+      </div>
       <button class="burger-menu">☰</button>
       <nav>
         <ul>
@@ -22,19 +26,35 @@
     </header>
 
     <main>
-      <section id="accueil" class="hero">
-        <h1>Création numérique & logicielle</h1>
-        <h2>Votre site web sur mesure</h2>
-        <p>
-          Au cœur des Vosges, j'accompagne les artisans, commerçants et
-          associations dans leur transition numérique avec des solutions
-          performantes et esthétiques.
-        </p>
+      <section id="accueil" class="split-section hero">
+        <div class="text-content">
+          <h1>Création numérique & logicielle</h1>
+          <br />
+          <h2>
+            Des sites web clairs, modernes et utiles pour les petites structures
+          </h2>
+          <p class="hero-description">
+            FG Création accompagne les artisans, associations et petits
+            commerçants dans la création de sites vitrines, pages
+            professionnelles, catalogues simples et solutions web évolutives.
+            <br />
+          </p>
+        </div>
+        <div class="hero-image-card">
+          <div class="image-wrapper">
+            <img src="assets/vosges1.jpg" alt="Paysage Vosges FG Création" />
+          </div>
+          <div class="card-caption">
+            <h3>Une présence web à votre image</h3>
+            <p>Un site lisible, rapide, rassurant et facile à faire évoluer.</p>
+          </div>
+        </div>
       </section>
 
       <div class="container">
         <section id="approche" class="split-section">
           <div class="text-content">
+            <p class="eyebrow">Développement web local • Vosges</p>
             <h2 class="section-title" style="text-align: left">Mon Approche</h2>
 
             <div class="text-body">
@@ -47,109 +67,88 @@
                 simples vitrines, mais de véritables outils de travail :
                 rapides, sécurisés et parfaitement adaptés à vos besoins.
               </p>
-              <p
-                style="
-                  font-style: italic;
-                  font-weight: 500;
-                  color: var(--primary-color);
-                "
-              >
-              </p>
             </div>
           </div>
 
           <div class="image-container">
-            <img src="assets/chemin.jpg" alt="Développeur FG Création" />
+            <img src="assets/vosges2.jpg" alt="Développeur FG Création" />
           </div>
         </section>
+      </div>
 
-        <section id="services" style="margin-top: 5rem">
-          <h2 class="section-title">Mes Services</h2>
-          <div class="services-grid">
-            <div class="service-box">
-              <h3>Sites Vitrines</h3>
-              <p>
-                Présentez votre activité, vos valeurs et attirez de nouveaux
-                clients avec un design élégant, clair et professionnel.
-              </p>
-            </div>
-            <div class="service-box">
-              <h3>E-commerce</h3>
-              <p>
-                Vendez vos produits en ligne 24h/24 avec une boutique sécurisée,
-                performante et facile à gérer au quotidien.
-              </p>
-            </div>
-            <div class="service-box">
-              <h3>Sur Mesure</h3>
-              <p>
-                Des applications web spécifiques pour digitaliser vos processus
-                internes et vous faire gagner un temps précieux.
-              </p>
-            </div>
+      <section id="services" class="full-width-bg">
+        <div class="services-header">
+          <p class="eyebrow">Prestations</p>
+          <h2 class="section-title">
+            Ce que FG Création peut<br />construire pour vous
+          </h2>
+          <p class="services-subtitle">
+            Des solutions sobres, adaptées au terrain, pensées pour être
+            comprises rapidement par vos visiteurs.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-box">
+            <div class="icon-badge">🌿</div>
+            <h3>Site vitrine</h3>
+            <p>
+              Une présentation élégante de votre activité, vos services, vos
+              horaires, vos images et vos coordonnées.<br />
+              Présentez votre activité, vos valeurs et attirez de nouveaux
+              clients avec un design élégant, clair et professionnel.
+            </p>
           </div>
-        </section>
 
-        <section id="portfolio" style="margin-top: 5rem">
-          <h2 class="section-title">Mes Réalisations</h2>
-          <p
-            style="
-              text-align: center;
-              max-width: 800px;
-              margin: 0 auto 3rem auto;
-              color: var(--text-light);
-            "
-          >
-            Explorez une sélection de mes derniers projets web. Cliquez sur une
-            image pour l'agrandir et visiter le site.
+          <div class="service-box">
+            <div class="icon-badge">🛒</div>
+            <h3>Catalogue ou e-commerce léger</h3>
+            <p>
+              Une structure simple pour présenter vos produits, préparer une
+              boutique ou gérer des commandes.Vendez vos produits en ligne
+              24h/24 avec une boutique sécurisée, performante et facile à gérer
+              au quotidien.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <div class="icon-badge">⚙️</div>
+            <h3>Maintenance & évolutions</h3>
+            <p>
+              Ajout de pages, amélioration visuelle, corrections, mise en ligne,
+              suivi technique. Des applications web spécifiques pour digitaliser
+              vos processus internes et vous faire gagner un temps précieux.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio-bg">
+        <div class="section-inner">
+          <p class="eyebrow">Portfolio</p>
+          <h2 class="section-title">Ils m'ont fait confiance</h2>
+
+          <p class="portfolio-description">
+            Explorez une sélection de mes derniers projets web.
           </p>
 
-          <div class="photo-grid-two-rows" data-gallery="portfolio">
-            <img
-              src="assets/potier.PNG"
-              class="gallery-thumb"
-              alt="Site Vitrine - Potier de grès"
-              data-link="https://potier.netlify.app/"
-            />
-            <img
-              src="assets/chroniques.PNG"
-              class="gallery-thumb"
-              alt="Blog - Chroniques d'Oelenberg"
-              data-link="https://chroniques-oelenberg.netlify.app/"
-            />
-            <img
-              src="assets/jardiniers.PNG"
-              class="gallery-thumb"
-              alt="Association - Jardiniers de la Bresse"
-              data-link="https://les-jardiniers-de-la-bresse.netlify.app/"
-            />
-            <img
-              src="assets/patrimoinePNG.PNG"
-              class="gallery-thumb"
-              alt="Culture - Patrimoine Chrétien Vivant"
-              data-link="https://patrimoine-chretien-vivant.netlify.app/"
-            />
-          </div>
-
-          <div class="gallery-info-box">
-            <p>cliquez sur une image pour accéder au carrousel interactif</p>
-          </div>
-
-          <div style="text-align: center; margin-top: 2rem">
-            <button id="btn-all-portfolio" class="btn-popup-trigger">
-              Voir tous les projets
+          <div
+            style="text-align: center; margin-top: 3rem; margin-bottom: 2rem"
+          >
+            <button id="btn-all-portfolio" class="btn-popup-trigger btn-large">
+              Mes réalisations
             </button>
           </div>
 
           <div id="data-all-portfolio" style="display: none">
             <img
               src="assets/potier.PNG"
-              alt="Site Vitrine - Potier de grès"
+              alt="Site Vitrine activité artisanale- Potier de grès"
               data-link="https://potier.netlify.app/"
             />
             <img
               src="assets/chroniques.PNG"
-              alt="Blog - Chroniques d'Oelenberg"
+              alt="Site e-commerce de livres - Chroniques d'Oelenberg"
               data-link="https://chroniques-oelenberg.netlify.app/"
             />
             <img
@@ -163,57 +162,122 @@
               data-link="https://patrimoine-chretien-vivant.netlify.app/"
             />
             <img
-              src="assets/rando.PNG"
-              alt="Événement - Rando Moto"
+              src="assets/randomoto.png"
+              alt="sîte société - Rando Moto - projet personnel"
               data-link="https://randomoto.netlify.app/"
             />
-          </div>
-        </section>
-
-        <section
-          id="contact"
-          class="split-section"
-          style="margin-top: 6rem; margin-bottom: 2rem"
-        >
-          <div class="image-container">
             <img
-              src="assets/carte-societe.png"
-              alt="Carte de visite FG Création"
-              style="box-shadow: 0 10px 30px rgba(109, 40, 217, 0.2)"
+              src="assets/faleres.PNG"
+              alt="Site vitrine et réservations - gîte les Faleres - projet personnel"
+              data-link="https://les-faleres.netlify.app/"
+            />
+            <img
+              src="assets/projet_alimentaire.PNG"
+              alt="Projet personnel - Alimentation"
+              data-link="https://projet-alimentaire-local.netlify.app/"
             />
           </div>
-          <div class="text-content">
-            <h2 class="section-title" style="text-align: left">
-              Contactez-moi
-            </h2>
-            <p style="margin-bottom: 2rem; color: var(--text-light)">
-              Prêt à donner vie à votre projet numérique ? Discutons-en
-              ensemble.
-            </p>
+        </div>
+      </section>
 
-            <form class="contact-form">
-              <input type="text" placeholder="Votre nom" required />
-              <input type="email" placeholder="Votre courriel" required />
-              <textarea
-                placeholder="Votre projet en quelques mots..."
-                rows="5"
-                required
-              ></textarea>
-              <button
-                type="submit"
-                class="btn-popup-trigger"
-                style="
-                  width: 100%;
-                  background: var(--primary-color);
-                  color: white;
-                "
+      <!-- SECTION CONTACT PLEINE LARGEUR FOND SOMBRE -->
+      <section id="contact" class="contact-dark-section">
+        <div class="contact-inner">
+          <!-- Colonne gauche -->
+          <div class="contact-left">
+            <p class="contact-eyebrow">
+              <span class="eyebrow-line"></span> CONTACT
+            </p>
+            <h2 class="contact-title">Parlons de votre projet</h2>
+            <p class="contact-subtitle">
+              Prêt à donner vie à votre site ?&nbsp;
+            </p>
+            <div
+              class="contact-card-wrapper"
+              id="card-zoom-trigger"
+              title="Cliquez pour agrandir"
+            >
+              <img
+                src="assets/carte_societe_modifiee.png"
+                alt="Carte de visite FG Création"
+                class="contact-card-img"
+              />
+            </div>
+            <button class="btn-card-zoom" id="btn-card-zoom">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <line x1="11" y1="8" x2="11" y2="14" />
+                <line x1="8" y1="11" x2="14" y2="11" />
+              </svg>
+              Cliquez pour agrandir
+            </button>
+          </div>
+
+          <!-- Colonne droite : formulaire Netlify -->
+          <div class="contact-right">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="contact-form-dark"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display: none">
+                <label>Ne pas remplir : <input name="bot-field" /></label>
+              </p>
+
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="type-projet">Type de projet</label>
+                <select id="type-projet" name="type-projet">
+                  <option value="site-vitrine">Site vitrine</option>
+                  <option value="ecommerce">Catalogue / E-commerce</option>
+                  <option value="maintenance">
+                    Maintenance &amp; évolutions
+                  </option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Présentez brièvement votre activité, votre besoin et votre délai idéal."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-contact-submit">
                 Envoyer la demande
               </button>
             </form>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <div id="image-modal" class="modal">
@@ -239,8 +303,40 @@
       <button class="modal-nav-btn next-modal-btn">❯</button>
     </div>
 
+    <!-- MODALE CARTE DE VISITE AGRANDIE -->
+    <div
+      id="card-modal"
+      class="card-modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Carte de visite agrandie"
+    >
+      <div class="card-modal-box">
+        <button
+          class="card-modal-close"
+          id="card-modal-close"
+          aria-label="Fermer"
+        >
+          &times;
+        </button>
+        <img
+          src="assets/carte-societe.png"
+          alt="Carte de visite FG Création agrandie"
+          class="card-modal-img"
+        />
+        <p class="card-modal-caption">
+          FG Création &mdash; Votre site web sur mesure
+        </p>
+      </div>
+    </div>
+
     <footer>
-      <p>&copy; 2026 FG Création - Votre site web sur mesure dans les Vosges</p>
+      <div class="footer-content">
+        <p>
+          &copy; 2026 FG Création - Votre site web sur mesure dans les Vosges
+        </p>
+        <a href="#accueil" class="btn-back-home">Retour à l'accueil</a>
+      </div>
     </footer>
 
     <script src="script.js"></script>
