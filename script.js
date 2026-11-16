@@ -202,4 +202,55 @@ document.addEventListener("DOMContentLoaded", () => {
       closeCardModal();
     }
   });
+
+  // ==========================================
+  // 6. ENVOI ASYNCHRONE DU FORMULAIRE NETLIFY
+  // ==========================================
+  const contactForm = document.getElementById("contact-form");
+  const contactSuccess = document.getElementById("contact-success");
+  const btnResetForm = document.getElementById("btn-reset-form");
+
+  if (contactForm && contactSuccess) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector(".btn-contact-submit");
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = "Envoi en cours...";
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then((response) => {
+          if (response.ok) {
+            contactForm.reset();
+            contactForm.style.display = "none";
+            contactSuccess.style.display = "block";
+          } else {
+            throw new Error("Erreur réseau lors de l'envoi.");
+          }
+        })
+        .catch(() => {
+          alert(
+            "Une erreur s'est produite lors de l'envoi. Veuillez réessayer dans quelques instants.",
+          );
+        })
+        .finally(() => {
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+        });
+    });
+
+    if (btnResetForm) {
+      btnResetForm.addEventListener("click", () => {
+        contactSuccess.style.display = "none";
+        contactForm.style.display = "flex";
+      });
+    }
+  }
 });

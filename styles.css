@@ -806,6 +806,54 @@ footer {
   box-shadow: 0 12px 35px rgba(147, 51, 234, 0.55);
 }
 
+/* --- BOÎTE DE CONFIRMATION FORMULAIRE --- */
+.contact-success-box {
+  background: #1c1c2e;
+  border: 1.5px solid rgba(124, 58, 237, 0.45);
+  border-radius: 20px;
+  padding: 3rem 2.2rem;
+  text-align: center;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(124, 58, 237, 0.15);
+  animation: slideUpModal 0.4s ease;
+}
+
+.success-icon-circle {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 170, 0.18),
+    rgba(124, 58, 237, 0.25)
+  );
+  border: 2px solid #00d4aa;
+  color: #00d4aa;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 212, 170, 0.25);
+}
+
+.contact-success-box h3 {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.9rem;
+}
+
+.contact-success-box p {
+  font-size: 1rem;
+  color: #a0a8c0;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
 /* --- Responsive contact --- */
 @media (max-width: 850px) {
   .contact-inner {
