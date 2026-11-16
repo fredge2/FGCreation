@@ -52,7 +52,7 @@ a {
 
 /* --- HEADER & NAVIGATION --- */
 header {
-  background-color: #ffffff;
+  background-color: #bfdbfe;
   padding: 1.2rem 5%;
   display: flex;
   justify-content: space-between;
@@ -149,9 +149,9 @@ nav a.active {
 /* --- HERO SECTION --- */
 /* --- HERO SECTION --- */
 .hero {
-  background-color: white; /* Fond propre blanc */
+  background-color: #fdfae1; /* Fond propre blanc */
   height: auto; /* Hauteur dynamique */
-  padding: 6rem 5%; /* Padding important pour aérer, ou 5rem 5% sur `.container` si appliqué */
+  padding: 8rem 5%; /* Padding important pour aérer, ou 5rem 5% sur `.container` si appliqué */
   display: flex;
   align-items: center; /* Alignement vertical */
   text-align: left; /* Alignement du texte à gauche */
@@ -572,7 +572,7 @@ footer {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: #dbeafe;
     padding: 2rem;
     box-shadow: 0 10px 15px rgba(30, 27, 75, 0.05);
   }
@@ -596,7 +596,7 @@ footer {
 }
 /* Ajustements spécifiques pour la hero énorme sur mobile */
 .hero.split-section {
-  padding: 2rem 5%; /* Réduire padding vertical sur mobile */
+  padding: 4rem 5%; /* Réduire padding vertical sur mobile */
   gap: 3rem; /* Réduire gap */
 }
 .hero h1 {
@@ -986,4 +986,96 @@ footer {
   background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
   padding: 6rem 5%;
   margin: 0; /* Élimine la bande grise */
+}
+/* --- PROJETS MIS EN AVANT (QUINCONCE) --- */
+.featured-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 960px; /* Plus étroit que le conteneur (1100px) pour bien laisser voir le fond pastel */
+  margin: 3.5rem auto 0 auto;
+}
+
+.project-showcase-box {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 35px rgba(30, 27, 75, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-showcase-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(124, 58, 237, 0.14);
+}
+
+/* Inversion pour le projet du milieu (image à gauche, texte à droite) */
+.project-showcase-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-showcase-text {
+  flex: 1.1;
+  text-align: left;
+}
+
+.project-tag {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #007c89;
+  background-color: #e0f2fe;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.project-showcase-text h3 {
+  font-size: 1.55rem;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.project-showcase-text p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.75;
+  margin-bottom: 1.8rem;
+}
+
+.project-showcase-image {
+  flex: 1;
+}
+
+.project-showcase-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(30, 27, 75, 0.1);
+  border: 1px solid #f3f4f6;
+  display: block;
+}
+
+.portfolio-more-label {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+}
+
+/* --- RESPONSIVE MOBILE POUR LES BOX PROJETS --- */
+@media (max-width: 850px) {
+  .project-showcase-box,
+  .project-showcase-box.reverse {
+    flex-direction: column-reverse; /* Image au-dessus du texte sur mobile */
+    padding: 1.8rem;
+    gap: 1.8rem;
+  }
 }

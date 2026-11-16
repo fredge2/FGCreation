@@ -142,28 +142,120 @@
           <h2 class="section-title">Ils m'ont fait confiance</h2>
 
           <p class="portfolio-description">
-            Explorez une sélection de mes derniers projets web.
+            Découvrez une sélection de sites conçus sur mesure, pensés pour la
+            performance, la clarté et la pérennité.
           </p>
 
+          <!-- PROJETS MIS EN AVANT EN QUINCONCE -->
+          <div class="featured-projects">
+            <!-- Projet 1 : Texte à gauche, Photo à droite -->
+            <article class="project-showcase-box">
+              <div class="project-showcase-text">
+                <span class="project-tag">Artisanat • Site vitrine</span>
+                <h3>Pascal Duguet — Potier de grès</h3>
+                <p>
+                  Conception d'un site vitrine épuré mettant en valeur le
+                  travail artisanal du grès et les cuissons au bois (four
+                  anagama). Architecture légère sans framework lourd,
+                  optimisation poussée du poids des galeries photographiques
+                  pour un affichage instantané sur mobile et intégration d'un
+                  formulaire de contact sécurisé.
+                </p>
+                <a
+                  href="https://www.pascal-duguet.fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-popup-trigger"
+                >
+                  Visiter le site
+                </a>
+              </div>
+              <div class="project-showcase-image">
+                <img
+                  src="assets/potier.PNG"
+                  alt="Aperçu du site Pascal Duguet, potier de grès"
+                />
+              </div>
+            </article>
+
+            <!-- Projet 2 : Photo à gauche, Texte à droite (classe .reverse) -->
+            <article class="project-showcase-box reverse">
+              <div class="project-showcase-text">
+                <span class="project-tag"
+                  >Édition • Catalogue & E-commerce léger</span
+                >
+                <h3>Les Chroniques d'Oelenberg</h3>
+                <p>
+                  Développement d'une plateforme éditoriale dédiée à une saga
+                  historique. Structuration claire de la présentation des
+                  ouvrages, navigation fluide entre les tomes, gestion d'un
+                  parcours d'achat simplifié et optimisation du référencement
+                  naturel (SEO sémantique) pour assurer une visibilité durable.
+                </p>
+                <a
+                  href="https://Oelenberg.fr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-popup-trigger"
+                >
+                  Visiter le site
+                </a>
+              </div>
+              <div class="project-showcase-image">
+                <img
+                  src="assets/chroniques.PNG"
+                  alt="Aperçu du site Les Chroniques d'Oelenberg"
+                />
+              </div>
+            </article>
+
+            <!-- Projet 3 : Texte à gauche, Photo à droite -->
+            <article class="project-showcase-box">
+              <div class="project-showcase-text">
+                <span class="project-tag"
+                  >Art & Musique • Portfolio interactif</span
+                >
+                <h3>Olivier Costantino</h3>
+                <p>
+                  Création d'un espace d'exposition numérique sur mesure alliant
+                  galerie visuelle et lecteur audio intégré. Développement en
+                  HTML, CSS et JavaScript natif (Vanilla JS) garantissant une
+                  lecture fluide des pistes sonores sans dépendance externe, une
+                  ergonomie responsive et une maintenance simplifiée.
+                </p>
+
+                <a
+                  href="https://olivier-costantino.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-popup-trigger"
+                >
+                  Visiter le site
+                </a>
+              </div>
+              <div class="project-showcase-image">
+                <img
+                  src="assets/site_olivier.PNG"
+                  alt="Aperçu du site Olivier Costantino"
+                />
+              </div>
+            </article>
+          </div>
+
+          <!-- BOUTON ET DONNÉES DU CARROUSEL (Autres réalisations) -->
           <div
-            style="text-align: center; margin-top: 3rem; margin-bottom: 2rem"
+            style="text-align: center; margin-top: 4rem; margin-bottom: 1.5rem"
           >
+            <p class="portfolio-more-label">
+              Envie d'en voir davantage ? Parcourez d'autres projets associatifs
+              et personnels :
+            </p>
             <button id="btn-all-portfolio" class="btn-popup-trigger btn-large">
-              Mes réalisations
+              Autres réalisations
             </button>
           </div>
 
           <div id="data-all-portfolio" style="display: none">
-            <img
-              src="assets/potier.PNG"
-              alt="Site Vitrine activité artisanale- Potier de grès"
-              data-link="https://www.pascal-duguet.fr"
-            />
-            <img
-              src="assets/chroniques.PNG"
-              alt="Site e-commerce de livres - Chroniques d'Oelenberg"
-              data-link="https://Oelenberg.fr"
-            />
             <img
               src="assets/jardiniers.PNG"
               alt="Association - Jardiniers de la Bresse"
@@ -176,13 +268,8 @@
             />
             <img
               src="assets/randomoto.png"
-              alt="sîte société - Rando Moto - projet personnel"
+              alt="Site société - Rando Moto - projet personnel"
               data-link="https://randomoto.netlify.app/"
-            />
-            <img
-              src="assets/site_olivier.PNG"
-              alt="sîte pour un ami artiste peintre"
-              data-link="https://olivier-costantino.netlify.app/"
             />
             <img
               src="assets/faleres.PNG"
@@ -197,7 +284,6 @@
           </div>
         </div>
       </section>
-
       <!-- SECTION CONTACT PLEINE LARGEUR FOND SOMBRE -->
       <section id="contact" class="contact-dark-section">
         <div class="contact-inner">
