@@ -4,18 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      FG Création - Développeur Web dans les Vosges - Création de sites web
+      FG Création | Développeur Web dans les Vosges — Création de sites internet
+      - référencement naturel - maintenance et évolutions
     </title>
     <meta
       name="description"
-      content="Développeur web spécialisé dans la création de sites vitrines, e-commerce et applications sur-mesure
-    Donnez vie à vos projets digitaux dans les Vosges et au-delà."
+      content="Développeur web indépendant dans les Vosges. Création de sites vitrines, catalogues et solutions sur mesure rapides et sécurisées pour artisans, associations et PME."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fgcreation.eu/" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+
+    <!-- Open Graph (aperçu lors du partage sur réseaux sociaux / messageries) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="FG Création" />
+    <meta
+      property="og:title"
+      content="FG Création — Développeur Web dans les Vosges"
     />
     <meta
-      name="keywords"
-      content="développeur web, création site internet, 
-   site vitrine, e-commerce, HTML CSS JS, application web"
+      property="og:description"
+      content="Sites vitrines, catalogues et applications web sur mesure pour artisans, commerçants et associations des Vosges."
     />
+    <meta property="og:url" content="https://fgcreation.eu/" />
+    <meta
+      property="og:image"
+      content="https://fgcreation.eu/assets/vosges1.jpg"
+    />
+
+    <!-- Données structurées Schema.org (SEO Local Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "FG Création",
+        "description": "Création de sites vitrines, catalogues en ligne et solutions web sur mesure pour artisans, associations et petites entreprises dans les Vosges.",
+        "url": "https://fgcreation.eu/",
+        "logo": "https://fgcreation.eu/assets/logo.png",
+        "image": "https://fgcreation.eu/assets/vosges1.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Vosges",
+          "addressCountry": "FR"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Vosges" },
+          { "@type": "AdministrativeArea", "name": "Grand Est" }
+        ],
+        "priceRange": "€€"
+      }
+    </script>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -41,7 +80,7 @@
     <main>
       <section id="accueil" class="split-section hero">
         <div class="text-content">
-          <h1>Création numérique & logicielle</h1>
+          <h1>Création de sites web sur mesure dans les Vosges</h1>
           <br />
           <h2>
             Des sites web clairs, modernes et utiles pour les petites structures
@@ -55,7 +94,7 @@
         </div>
         <div class="hero-image-card">
           <div class="image-wrapper">
-            <img src="assets/vosges1.jpg" alt="Paysage Vosges FG Création" />
+            <img src="assets/vosges1.jpg" alt="alt="Paysage des Vosges — Création de sites web sur mesure FG Création"" />
           </div>
           <div class="card-caption">
             <h3>Une présence web à votre image</h3>
@@ -71,9 +110,12 @@
             <h2 class="section-title" style="text-align: left">Mon Approche</h2>
 
             <div class="text-body">
+             <div class="text-body">
               <p style="margin-bottom: 1.5rem">
-                "C'est par le code et le design que j'ai trouvé le moyen de
-                mettre en valeur le savoir-faire local de notre région.
+                « C'est par le code et le design que j'ai trouvé le moyen de
+                mettre en valeur le savoir-faire local de notre région, de
+                Remiremont à Épinal, de Gérardmer
+                à La Bresse, du Thillot à la vallée de la Thur. »
               </p>
               <p style="margin-bottom: 1.5rem">
                 J'ai à cœur de créer des sites internet qui ne sont pas de
@@ -81,10 +123,11 @@
                 rapides, sécurisés et parfaitement adaptés à vos besoins.
               </p>
             </div>
+            </div>
           </div>
 
           <div class="image-container">
-            <img src="assets/vosges2.jpg" alt="Développeur FG Création" />
+            <img src="assets/vosges2.jpg" alt="Développeur web indépendant dans les Vosges — FG Création" />
           </div>
         </section>
       </div>
@@ -118,7 +161,7 @@
             <h3>Catalogue ou e-commerce léger</h3>
             <p>
               Une structure simple pour présenter vos produits, préparer une
-              boutique ou gérer des commandes.Vendez vos produits en ligne
+              boutique ou gérer des commandes. Vendez vos produits en ligne
               24h/24 avec une boutique sécurisée, performante et facile à gérer
               au quotidien.
             </p>
@@ -303,7 +346,7 @@
             >
               <img
                 src="assets/carte_societe_modifiee.png"
-                alt="Carte de visite FG Création"
+                alt="Carte de visite FG Création — Développeur web dans les Vosges"
                 class="contact-card-img"
               />
             </div>
@@ -331,7 +374,7 @@
           <!-- Colonne droite : formulaire Netlify -->
           <div class="contact-right">
             <form
-             id="contact-form"
+              id="contact-form"
               name="contact"
               netlify
               method="POST"
@@ -382,17 +425,25 @@
               </button>
             </form>
 
-            <div id="contact-success" class="contact-success-box" style="display: none;">
+            <div
+              id="contact-success"
+              class="contact-success-box"
+              style="display: none"
+            >
               <div class="success-icon-circle">✓</div>
               <h3>Message bien envoyé !</h3>
               <p>
-                Merci pour votre prise de contact. J'ai bien reçu votre demande et je vous répondrai dans les plus brefs délais.
+                Merci pour votre prise de contact. J'ai bien reçu votre demande
+                et je vous répondrai dans les plus brefs délais.
               </p>
-              <button type="button" id="btn-reset-form" class="btn-contact-submit">
+              <button
+                type="button"
+                id="btn-reset-form"
+                class="btn-contact-submit"
+              >
                 Envoyer un autre message
               </button>
             </div>
-          </div>
           </div>
         </div>
       </section>
